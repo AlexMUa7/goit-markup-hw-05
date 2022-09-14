@@ -80,6 +80,9 @@ p {
   display: flex;
 }
 
+.site-nav.list .link.current {
+}
+
 .site-nav .item {
   display: flex;
 }
@@ -105,11 +108,15 @@ p {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav.list a:hover,
 :focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Site navigation footer*/
@@ -141,6 +148,8 @@ p {
 .nav-footer a:hover,
 .nav-footer a:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-footer.list a.contacts {
@@ -150,6 +159,8 @@ p {
 .nav-footer.list a:hover,
 .nav-footer.list a:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-title {
@@ -184,6 +195,8 @@ p {
 .button.primary:hover,
 .button.primary:focus {
   background-color: #188ce8;
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button {
@@ -209,6 +222,8 @@ p {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -309,6 +324,8 @@ p {
 .header-contacts.list .link:hover,
 .header-contacts.list .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero {
   text-align: center;
@@ -425,6 +442,7 @@ p {
 .site-nav.works.list {
   justify-content: space-between;
   margin-right: 30px;
+  position: relative;
 }
 
 .site-nav.works.list:last-child {
@@ -471,12 +489,16 @@ p {
 .portfolio-card {
   display: block;
   outline: none;
+  position: relative;
 }
 
-.portfolio-card:hover,
-.portfolio-card:focus {
+.portfolio-total:hover,
+.portfolio-total:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
 }
 
 .portfolio-list.list:nth-child(3n) {
@@ -543,6 +565,8 @@ p {
 .social-icons:focus {
   fill: #ffffff;
   background-color: #2196f3;
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-list.icons {
@@ -565,6 +589,8 @@ p {
 .company-icon:focus {
   color: #2196f3;
   border: 1px solid #2196f3;
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .items-clients {
@@ -606,9 +632,66 @@ p {
 .footer.social-icons:hover,
 .footer.social-icons:focus {
   background: #2196f3;
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer.socials-icon.list {
   display: flex;
   gap: 10px;
+}
+
+/* Позиционирвоание элементов*/
+
+.captions {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-header);
+  background: rgba(47, 48, 58, 0.8);
+  align-items: center;
+  padding-top: 27px;
+  width: 370px;
+  height: 70px;
+}
+
+.product-caption {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+}
+
+.product-thumb {
+  position: relative;
+}
+
+.portfolio-info {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+}
+
+.portfolio-about {
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  opacity: 0;
+}
+
+.portfolio-total {
+  position: relative;
+}
+
+.portfolio-about:hover,
+:focus {
+  opacity: 1;
+  transition-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
